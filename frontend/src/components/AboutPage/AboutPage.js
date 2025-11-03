@@ -20,8 +20,8 @@ const aboutData = [
   },
   {
     icon: "bx bx-support about-icon",
-    title: "LeetCode",
-    subtitle: "246+ Solutions",
+    title: "Competitive Programming",
+    subtitle: "250+ Solutions",
   },
 ];
 
@@ -116,12 +116,12 @@ function AboutPage({ isBatterySavingOn, isWindowModalVisible, addTab }) {
               >
                 <span className="about-name">Kartavya Singh</span>
                 <p className="about-role">
-                  UC '26, B.S & M.Eng in Computer Science, Full Stack Software
+                  MSU '27, B.S in Computer Science and Mathematics, Full Stack Software
                   Developer
                 </p>
                 <p className="about-description">
-                  I'm Kartavya Singh, a Computer Science senior at the
-                  University of Cincinnati, passionate about creating impactful
+                  I'm Kevin Ho, a junior at the
+                  Mississippi State University, passionate about creating impactful
                   AI solutions, experienced in Full Stack Development. My
                   journey is driven by curiosity and a commitment to continuous
                   learning through hackathons, personal projects, and real-world
@@ -206,7 +206,7 @@ function AboutPage({ isBatterySavingOn, isWindowModalVisible, addTab }) {
                   <StyledButton
                     onClick={(e) => {
                       e.preventDefault();
-                      addTab("FeedTab", { title: "Kartavya's Feed" });
+                      addTab("FeedTab", { title: "Kevin's Feed" });
                     }}
                   >
                     <ButtonShadow />
@@ -218,7 +218,7 @@ function AboutPage({ isBatterySavingOn, isWindowModalVisible, addTab }) {
                   <StyledButton
                     onClick={(e) => {
                       e.preventDefault();
-                      addTab("AIChatTab", { title: "Kartavya's AI Companion" });
+                      addTab("AIChatTab", { title: "Kevin's AI Companion" });
                     }}
                   >
                     <ButtonShadow />

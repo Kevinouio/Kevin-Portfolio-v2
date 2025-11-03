@@ -143,12 +143,12 @@ function ContactPage({ isBatterySavingOn, addTab }) {
                 }
               >
                 Email:{" "}
-                <a href="mailto:singhk6@mail.uc.edu" className="lead">
-                  singhk6@mail.uc.edu
+                <a href="mailto:kth258@msstate.edu" className="lead">
+                  kth258@msstate.edu
                 </a>{" "}
                 ||{" "}
-                <a href="mailto:kartavya.singh17@yahoo.com" className="lead">
-                  kartavya.singh17@yahoo.com
+                <a href="mailto:kevintho2005@gmail.com" className="lead">
+                  kevintho2005@gmail.com
                 </a>
               </motion.h5>
               <motion.h5
