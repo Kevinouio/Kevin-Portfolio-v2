@@ -131,7 +131,7 @@ function HomePage({ isBatterySavingOn, scrolled, addTab, sendQuery }) {
     if (!trimmed) return;
     // open the AIChatTab and pass the initialQuery in its data
     addTab("AIChatTab", {
-      title: "Kartavya's AI Companion",
+      title: "Kevin's AI Companion",
     });
     sendQuery(trimmed);
     // setQuery(trimmed);
@@ -267,7 +267,7 @@ function HomePage({ isBatterySavingOn, scrolled, addTab, sendQuery }) {
                 initial="hidden"
                 animate="show"
               >
-                Kartavya Singh
+                Kevin Ho
               </motion.h1>
 
               {/* Changing Text Animation */}
@@ -342,7 +342,7 @@ function HomePage({ isBatterySavingOn, scrolled, addTab, sendQuery }) {
                     // onTouchEnd={stop}
                     onClick={(e) => {
                       e.preventDefault();
-                      addTab("AIChatTab", { title: "Kartavya's AI Companion" });
+                      addTab("AIChatTab", { title: "Kevin's AI Companion" });
                     }}
                     aria-label={"Open AI Companion Tab"}
                   >

@@ -1,4 +1,4 @@
-# Kartavya’s Portfolio Website + AI Companion
+# Kevin’s Portfolio Website + AI Companion
 
 <p align="center">
   <img src="https://i.ibb.co/kVY2JjRS/Kartavya-Singh-Portfolio-Website-Thumbnail.png" alt="Portfolio Thumbnail" width="700"/>
@@ -23,7 +23,7 @@ The **AI Companion** is a conversational agent that lives on the portfolio site,
 
 - **Knowledge Base Aggregation:** On the backend, data from multiple sources (my portfolio content in MongoDB, my resume, and my GitHub repositories) is aggregated and kept up-to-date. This forms a rich knowledge base about my projects, work experience, education, skills, and more.
 - **Semantic Vector Search:** The text from these sources is pre-processed into semantic embeddings (using OpenAI’s embedding API). These embeddings are stored and indexed (leveraging MongoDB Atlas Search’s kNN capabilities). When a user asks a question, the system converts the query into an embedding and performs a **vector similarity search** to find relevant pieces of information across the knowledge base.
-- **GPT-4 Answer Generation:** Relevant context is then fed into an OpenAI GPT-4 model (via API) which generates a response in real-time. The AI has been prompt-engineered with a custom persona — it “speaks” in first person as Kartavya, with a friendly and knowledgeable tone. It uses the retrieved context to ground its answers, ensuring responses are factual and specific to my portfolio.
+- **GPT-4 Answer Generation:** Relevant context is then fed into an OpenAI GPT-4 model (via API) which generates a response in real-time. The AI has been prompt-engineered with a custom persona — it “speaks” in first person as Kevin, with a friendly and knowledgeable tone. It uses the retrieved context to ground its answers, ensuring responses are factual and specific to my portfolio.
 - **Conversation Memory:** The AI Companion maintains context over multiple interactions. It uses a rolling memory of the conversation (summarizing past Q&A exchanges) so that follow-up questions are answered with awareness of what’s already been discussed. This makes the chat feel coherent and continuous.
 - **Voice and Interaction:** The frontend integrates Web Speech API for speech-to-text, allowing users to **talk** to the AI using their microphone. After the AI answers, the interface may also suggest a few follow-up questions to nudge the conversation, using another GPT-powered helper behind the scenes.
 
@@ -65,8 +65,8 @@ The **AI Companion** is a conversational agent that lives on the portfolio site,
 
 ## 📦 Installation and Setup
 1. Clone the repository:
-   git clone https://github.com/your-username/Kartavya-Portfolio-MERN.git
-   cd Kartavya-Portfolio-MERN
+   git clone https://github.com/your-username/Kevin-Portfolio-v2.git
+   cd Kevin-Portfolio-v2
 2. Set up environment variables:
     In the backend folder, create a .env file and add:
         PORT=5000  

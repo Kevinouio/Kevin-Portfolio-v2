@@ -5,7 +5,7 @@ import { styled } from "@stitches/react";
 import "../../styles/AboutPage.css";
 import { SpotlightBG } from "./SpotlightBG";
 // import AboutImg from "../../../public/Kartavya-Profile-Photo.webp";
-import Resume from "../../assets/Singh_Kartavya_Resume2026.pdf";
+import Resume from "../../assets/KevinHoResume2026.pdf";
 
 const aboutData = [
   {
@@ -114,7 +114,7 @@ function AboutPage({ isBatterySavingOn, isWindowModalVisible, addTab }) {
                 whileInView="show"
                 exit="hidden"
               >
-                <span className="about-name">Kartavya Singh</span>
+                <span className="about-name">Kevin Ho</span>
                 <p className="about-role">
                   MSU '27, B.S in Computer Science and Mathematics, Full Stack Software
                   Developer
@@ -170,7 +170,7 @@ function AboutPage({ isBatterySavingOn, isWindowModalVisible, addTab }) {
                 </motion.a>
                 <motion.a
                   href={Resume}
-                  download="Kartavya-Singh-Resume-2026.pdf"
+                  download="KevinHoResume2026.pdf"
                   className="download-cv"
                   style={{ userSelect: "none" }}
                   draggable={false}
