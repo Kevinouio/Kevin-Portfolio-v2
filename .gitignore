@@ -16,6 +16,7 @@ logs/
 backend/logs/
 frontend/logs/
 
+
 # Local databases
 /data/db/
 

@@ -75,7 +75,7 @@ function AboutPage({ isBatterySavingOn, isWindowModalVisible, addTab }) {
           <div className="about-container">
             <motion.div className="about-row">
               <motion.img
-                src={`${process.env.PUBLIC_URL}/Kartavya-Profile-Photo.webp`}
+                src={`${process.env.PUBLIC_URL}/prof.jpg`}
                 className="about-image"
                 alt="Profile"
                 variants={isBatterySavingOn ? {} : fadeIn("right", 200, 0)}

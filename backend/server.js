@@ -14,7 +14,7 @@ const app = fastify({ logger: false, bodyLimit: 50 * 1024 * 1024 });
 app.register(require("@fastify/cors"), {
   origin: [
     "https://kartavya-portfolio-mern-frontend.onrender.com",
-    "https://kartavya-singh.com",
+    "https://kevinouio.com",
     "http://localhost:3000",
     "http://localhost:3001",
   ],
@@ -86,10 +86,10 @@ app.addHook("onResponse", (req, reply, done) => {
 
 // Global endpoints
 app.get("/", (req, reply) =>
-  reply.send("Welcome to Kartavya's MERN Portfolio Backend")
+  reply.send("Welcome to Kevin's MERN Portfolio Backend")
 );
 app.get("/api", (req, reply) =>
-  reply.send("This is the API track for Kartavya's MERN Portfolio Backend.")
+  reply.send("This is the API track for Kevin's MERN Portfolio Backend.")
 );
 
 // Error handler

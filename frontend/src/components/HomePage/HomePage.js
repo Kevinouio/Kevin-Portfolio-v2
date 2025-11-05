@@ -235,7 +235,7 @@ function HomePage({ isBatterySavingOn, scrolled, addTab, sendQuery }) {
                 whileInView={"show"}
               >
                 <animated.img
-                  src={`${process.env.PUBLIC_URL}/Kartavya.webp`}
+                  src={`${process.env.PUBLIC_URL}/Jolli.jpg`}
                   alt="Profile"
                   className={`profile-picture img-circle${frames[frameIndex]}`}
                   draggable="false"
