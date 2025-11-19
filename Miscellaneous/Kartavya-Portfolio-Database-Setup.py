@@ -4,7 +4,7 @@ from pymongo.server_api import ServerApi
 # MongoDB setup
 uri = "Shhh!"
 client = MongoClient(uri, server_api=ServerApi('1'))
-db = client["KartavyaPortfolioDB"]
+db = client["KevinHoPortfolioDB"]
 
 # Define a function to gather user input for images, paragraphs, and URLs
 def get_input_list(prompt):

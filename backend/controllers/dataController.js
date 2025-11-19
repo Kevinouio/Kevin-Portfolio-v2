@@ -4,6 +4,11 @@ const { getDB } = require("../config/mongodb");
 const jwt = require("jsonwebtoken");
 const { ObjectId } = require("mongodb");
 
+const ADMIN_COLLECTION =
+  process.env.ADMIN_COLLECTION || "KevinHoPortfolio";
+const ADMIN_OTP_COLLECTION =
+  process.env.ADMIN_OTP_COLLECTION || "KevinHoPortfolioOTP";
+
 // Helper: convert a route parameter or value to an ObjectId
 function getObjectId(id) {
   // If id consists only of digits, treat it as a timestamp (seconds)
@@ -69,8 +74,8 @@ async function fetchRepoLanguages(languagesUrl) {
 // 1) Define your static must-load images
 const MUST_LOAD_IMAGES = [
   "/home-bg.webp",
-  "/Kartavya.webp",
-  "/Kartavya-Profile-Photo.webp",
+  "/Kevin.webp",
+  "/prof.jpg",
   "/contact-bg.webp",
   "/system-user.webp",
   "/user-icon.svg",
@@ -1008,7 +1013,7 @@ const addLike = async (request, reply) => {
 const compareAdminName = async (request, reply) => {
   const { userName } = request.body;
   const db = getDB();
-  const admin = await db.collection("KartavyaPortfolio").findOne({});
+  const admin = await db.collection(ADMIN_COLLECTION).findOne({});
   if (!admin) {
     return reply.code(404).send({ message: "No Admin found." });
   }
@@ -1021,7 +1026,7 @@ const compareAdminPassword = async (request, reply) => {
   const { password } = request.body;
   const db = getDB();
   try {
-    const admin = await db.collection("KartavyaPortfolio").findOne({});
+    const admin = await db.collection(ADMIN_COLLECTION).findOne({});
     if (!admin) {
       return reply.code(404).send({ message: "Admin not found" });
     }
@@ -1032,8 +1037,8 @@ const compareAdminPassword = async (request, reply) => {
     // Generate OTP and store it
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     const expireTime = new Date(Date.now() + 5 * 60000); // 5 minutes from now
-    await db.collection("KartavyaPortfolioOTP").deleteMany({});
-    await db.collection("KartavyaPortfolioOTP").insertOne({ otp, expireTime });
+    await db.collection(ADMIN_OTP_COLLECTION).deleteMany({});
+    await db.collection(ADMIN_OTP_COLLECTION).insertOne({ otp, expireTime });
     reply.send({
       success: true,
       otpSent: true,
@@ -1048,7 +1053,7 @@ const compareOTP = async (request, reply) => {
   const { otp, rememberMe = false } = request.body;
   const db = getDB();
   try {
-    const otpData = await db.collection("KartavyaPortfolioOTP").findOne({});
+    const otpData = await db.collection(ADMIN_OTP_COLLECTION).findOne({});
     if (!otpData || otpData.otp !== otp) {
       return reply.code(400).send({ message: "Invalid OTP" });
     }
@@ -1071,7 +1076,7 @@ const compareOTP = async (request, reply) => {
     });
 
     // Invalidate the OTP after use
-    await db.collection("KartavyaPortfolioOTP").deleteOne({});
+    await db.collection(ADMIN_OTP_COLLECTION).deleteOne({});
     return reply.send({ success: true, message: "Logged in successfully!" });
   } catch (err) {
     reply.code(500).send({ message: "Server error" });
@@ -1091,7 +1096,7 @@ const setAdminCredentials = async (request, reply) => {
   const { userName, password, currentPassword } = request.body;
   const db = getDB();
   try {
-    const admin = await db.collection("KartavyaPortfolio").findOne({});
+    const admin = await db.collection(ADMIN_COLLECTION).findOne({});
     if (!admin) {
       return reply.code(404).send({ message: "Admin not found." });
     }
@@ -1103,8 +1108,8 @@ const setAdminCredentials = async (request, reply) => {
     }
     const hashedUsername = await bcrypt.hash(userName, 10);
     const hashedPassword = await bcrypt.hash(password, 10);
-    await db.collection("KartavyaPortfolio").deleteMany({});
-    await db.collection("KartavyaPortfolio").insertOne({
+    await db.collection(ADMIN_COLLECTION).deleteMany({});
+    await db.collection(ADMIN_COLLECTION).insertOne({
       userName: hashedUsername,
       password: hashedPassword,
     });
@@ -1146,8 +1151,8 @@ const getCollectionCounts = async (request, reply) => {
       yearInReviewTable: await db
         .collection("yearInReviewTable")
         .countDocuments({ deleted: { $ne: true } }),
-      KartavyaPortfolio: await db
-        .collection("KartavyaPortfolio")
+      [ADMIN_COLLECTION]: await db
+        .collection(ADMIN_COLLECTION)
         .countDocuments(),
       FeedTable: await db
         .collection("FeedTable")

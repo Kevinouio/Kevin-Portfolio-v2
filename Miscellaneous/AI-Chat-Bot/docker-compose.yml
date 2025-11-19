@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    # container_name: KartavyaPortfolioBackend
+    # container_name: KevinHoPortfolioBackend
     environment:
       PORT: ${PORT}
       MONGO_URI: ${MONGO_URI}
@@ -30,8 +30,8 @@ services:
   opensearch:
     image: opensearchproject/opensearch:latest
     environment:
-      cluster.name: KartavyaPortfolioOpenSearch-cluster
-      node.name: KartavyaPortfolioOpenSearch
+      cluster.name: KevinHoPortfolioOpenSearch-cluster
+      node.name: KevinHoPortfolioOpenSearch
       plugins.security.disabled: "true"
       discovery.type: single-node
       bootstrap.memory_lock: "true"
@@ -53,7 +53,7 @@ services:
 
   opensearch-dashboards:
     image: opensearchproject/opensearch-dashboards:latest
-    # container_name: KartavyaPortfolioDashboard
+    # container_name: KevinHoPortfolioDashboard
     environment:
       OPENSEARCH_HOSTS: '["http://opensearch:9200"]'
     ports:
@@ -66,7 +66,7 @@ services:
     build:
       context: ./deepseek
       dockerfile: Dockerfile
-    # container_name: KartavyaPortfolioDeepSeek
+    # container_name: KevinHoPortfolioDeepSeek
     hostname: deepseek # This ensures other containers can resolve "deepseek"
     environment:
       - GPU_ACCELERATION=${GPU_ACCELERATION}

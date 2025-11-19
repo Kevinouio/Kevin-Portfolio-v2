@@ -4,24 +4,24 @@ import { zoomIn, fadeIn } from "../../services/variants";
 import { styled } from "@stitches/react";
 import "../../styles/AboutPage.css";
 import { SpotlightBG } from "./SpotlightBG";
-// import AboutImg from "../../../public/Kartavya-Profile-Photo.webp";
+// import AboutImg from "../../../public/Kevin.webp";
 import Resume from "../../assets/KevinHoResume2026.pdf";
 
 const aboutData = [
   {
     icon: "bx bxs-hourglass about-icon",
-    title: "Coding Hours",
-    subtitle: "1300+ Hours",
+    title: "Research & Dev",
+    subtitle: "1500+ Hours",
   },
   {
     icon: "bx bx-trophy about-icon",
-    title: "Completed",
-    subtitle: "42+ Projects",
+    title: "Projects & Hackathons",
+    subtitle: "40+ Builds",
   },
   {
     icon: "bx bx-support about-icon",
-    title: "Competitive Programming",
-    subtitle: "250+ Solutions",
+    title: "ICPC & Clubs",
+    subtitle: "Regional medalist",
   },
 ];
 
@@ -75,7 +75,7 @@ function AboutPage({ isBatterySavingOn, isWindowModalVisible, addTab }) {
           <div className="about-container">
             <motion.div className="about-row">
               <motion.img
-                src={`${process.env.PUBLIC_URL}/prof.jpg`}
+                src={`${process.env.PUBLIC_URL}/Kevin.webp`}
                 className="about-image"
                 alt="Profile"
                 variants={isBatterySavingOn ? {} : fadeIn("right", 200, 0)}
@@ -116,16 +116,15 @@ function AboutPage({ isBatterySavingOn, isWindowModalVisible, addTab }) {
               >
                 <span className="about-name">Kevin Ho</span>
                 <p className="about-role">
-                  MSU '27, B.S in Computer Science and Mathematics, Full Stack Software
-                  Developer
+                  MSU '27 · B.S. Computer Science & Mathematics · 4.0 GPA
                 </p>
                 <p className="about-description">
-                  I'm Kevin Ho, a junior at the
-                  Mississippi State University, passionate about creating impactful
-                  AI solutions, experienced in Full Stack Development. My
-                  journey is driven by curiosity and a commitment to continuous
-                  learning through hackathons, personal projects, and real-world
-                  applications.
+                  I'm Kevin Ho, a double-major at Mississippi State University
+                  researching network dynamics, medical imaging, and AI
+                  alignment. From leading the Chess Club and ACM Competitive
+                  Programming team to winning Best Use of Streamlit at AI ATL,
+                  I love transforming deep technical research into accessible,
+                  human-centered software.
                 </p>
               </motion.div>
               <motion.h2

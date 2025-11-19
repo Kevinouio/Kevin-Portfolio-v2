@@ -42,7 +42,7 @@ func main() {
 	router.Use(cors.New(cors.Config{
 		AllowOrigins: []string{
 			"https://kartavya-portfolio-mern-frontend.onrender.com",
-			"https://kartavya-singh.com",
+			"https://kevin-ho.com",
 			"http://localhost:3000",
 			"http://localhost:3001",
 		},

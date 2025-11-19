@@ -1,43 +1,39 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import "../../styles/Footer.css";
+import Resume from "../../assets/KevinHoResume2026.pdf";
 
 const Footer = ({ isBatterySavingOn, addTab }) => {
   const linksData = [
     {
-      href: "https://github.com/Kartavya904",
+      href: "https://github.com/Kevinouio",
       icon: require("../../assets/img/icons/github.png"),
       label: "GitHub",
     },
     {
-      href: "https://devpost.com/Kartavya904",
-      icon: require("../../assets/img/icons/devpost.png"),
-      label: "DevPost",
-    },
-    {
-      href: "https://www.linkedin.com/in/kartavya-singh-singhk6",
+      href: "https://www.linkedin.com/in/kevin-ho-1a040b239/",
       icon: require("../../assets/img/icons/linkedin.png"),
       label: "LinkedIn",
     },
     {
-      href: "https://www.instagram.com/kartavya1710/",
-      icon: require("../../assets/img/icons/instagram.png"),
-      label: "Instagram",
+      href: "https://kevinouio.com",
+      icon: require("../../assets/img/icons/web.png"),
+      label: "Portfolio",
     },
     {
-      href: "https://discordapp.com/users/439541365580365835",
-      icon: require("../../assets/img/icons/discord.png"),
-      label: "Discord",
-    },
-    {
-      href: "https://calendly.com/singhk6/book-time-with-kartavya",
-      icon: require("../../assets/img/icons/calender.png"),
-      label: "Book Time with Kartavya",
-    },
-    {
-      href: "mailto:singhk6@mail.uc.edu",
+      href: "mailto:Kevintho2005@gmail.com",
       icon: require("../../assets/img/icons/email.png"),
-      label: "Email",
+      label: "Personal Email",
+    },
+    {
+      href: "mailto:kth258@msstate.edu",
+      icon: require("../../assets/img/icons/email.png"),
+      label: "MSU Email",
+    },
+    {
+      href: Resume,
+      icon: require("../../assets/img/icons/window.svg"),
+      label: "Resume",
     },
   ];
 
@@ -88,8 +84,8 @@ const Footer = ({ isBatterySavingOn, addTab }) => {
         whileTap={isBatterySavingOn ? {} : { scale: 0.99 }}
         onTap={() => scrollToSection("home")}
       >
-        <h2>Kartavya Singh</h2>
-        <p>Creating Impactful Solutions Through Code</p>
+        <h2>Kevin Ho</h2>
+        <p>AI researcher & full-stack engineer building human-centered tools</p>
       </motion.div>
 
       {/* Navigation Links */}
@@ -171,7 +167,7 @@ const Footer = ({ isBatterySavingOn, addTab }) => {
         transition={isBatterySavingOn ? {} : { delay: 0, type: "spring" }}
       >
         <p>
-          &copy; {new Date().getFullYear()} Kartavya Singh. All rights reserved.
+          &copy; {new Date().getFullYear()} Kevin Ho. All rights reserved.
         </p>
       </motion.div>
     </motion.footer>

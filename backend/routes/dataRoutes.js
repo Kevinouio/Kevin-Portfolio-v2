@@ -222,7 +222,7 @@ async function dataRoutes(fastify, options) {
   fastify.get("/top-langs", async (request, reply) => {
     // This route fetches an SVG from GitHub Readme Stats for the user's top languages
     const githubAPIUrl =
-      "https://github-readme-stats.vercel.app/api/top-langs/?username=Kartavya904&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866&hide=Jupyter%20Notebook,Roff";
+      "https://github-readme-stats.vercel.app/api/top-langs/?username=Kevinouio&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=0B1523&title_color=F9A826&icon_color=F9A826&hide=Jupyter%20Notebook,Roff";
     try {
       const fetch = (await import("node-fetch")).default;
       const response = await fetch(githubAPIUrl);

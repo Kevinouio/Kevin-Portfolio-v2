@@ -126,11 +126,11 @@ func ConnectDB(uri string, dbName string, aiName string) error {
 	}
 	primaryDbName = dbName
 	if primaryDbName == "" {
-		primaryDbName = "KartavyaPortfolioDB"
+		primaryDbName = "KevinHoPortfolioDB"
 	}
 	aiDbName = aiName
 	if aiDbName == "" {
-		aiDbName = "KartavyaPortfolioDBAI"
+		aiDbName = "KevinHoPortfolioDBAI"
 	}
 
 	// Setup MongoDB client

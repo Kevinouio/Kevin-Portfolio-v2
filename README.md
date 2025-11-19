@@ -1,7 +1,7 @@
 # Kevin’s Portfolio Website + AI Companion
 
 <p align="center">
-  <img src="https://i.ibb.co/kVY2JjRS/Kartavya-Singh-Portfolio-Website-Thumbnail.png" alt="Portfolio Thumbnail" width="700"/>
+  <img src="./frontend/public/Kevin.webp" alt="Kevin Ho Portfolio Preview" width="420"/>
 </p>
 
 <p align="center">

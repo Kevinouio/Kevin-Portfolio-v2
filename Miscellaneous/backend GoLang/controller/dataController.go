@@ -55,8 +55,8 @@ func init() {
 func updateMustLoadImagesCache() {
 	mustLoadImages := []string{
 		"/home-bg.webp",
-		"/Kartavya.webp",
-		"/Kartavya-Profile-Photo.webp",
+		"/Kevin Ho.webp",
+		"/Kevin Ho-Profile-Photo.webp",
 		"/contact-bg.webp",
 		"/system-user.webp",
 		"/user-icon.svg",
@@ -932,7 +932,7 @@ func SetAdminCredentials(c *gin.Context) {
 	db := config.GetDB()
 	// Fetch current admin record
 	var admin bson.M
-	err := db.Collection("KartavyaPortfolio").FindOne(ctx, bson.M{}).Decode(&admin)
+	err := db.Collection("KevinHoPortfolio").FindOne(ctx, bson.M{}).Decode(&admin)
 	if err != nil {
 		c.JSON(http.StatusNotFound, gin.H{"message": "Admin not found."})
 		return
@@ -947,9 +947,9 @@ func SetAdminCredentials(c *gin.Context) {
 	// Hash new credentials and replace record
 	newUserHash, _ := hashPassword(reqBody.UserName)
 	newPassHash, _ := hashPassword(reqBody.Password)
-	_, err = db.Collection("KartavyaPortfolio").DeleteMany(ctx, bson.M{})
+	_, err = db.Collection("KevinHoPortfolio").DeleteMany(ctx, bson.M{})
 	if err == nil {
-		_, err = db.Collection("KartavyaPortfolio").InsertOne(ctx, bson.M{"userName": newUserHash, "password": newPassHash})
+		_, err = db.Collection("KevinHoPortfolio").InsertOne(ctx, bson.M{"userName": newUserHash, "password": newPassHash})
 	}
 	if err != nil {
 		log.Println("Error setting admin credentials:", err)

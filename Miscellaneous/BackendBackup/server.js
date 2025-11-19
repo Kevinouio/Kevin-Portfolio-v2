@@ -31,7 +31,7 @@ app.use(useragent.express());
 app.use(cookieParser());
 const allowedOrigins = [
   "https://kartavya-portfolio-mern-frontend.onrender.com",
-  "https://kartavya-singh.com",
+  "https://kevin-ho.com",
   "http://localhost:3000",
   "http://localhost:3001",
 ];
@@ -219,13 +219,13 @@ connectDB();
 const dataRoutes = require("./routes/dataRoutes");
 // Root endpoint: Welcome message for the backend
 app.get("/", (req, res) => {
-  res.send("Welcome to Kartavya's MERN Portfolio Backend");
+  res.send("Welcome to Kevin's MERN Portfolio Backend");
 });
 
 // API root endpoint: Presentable description of the API track
 app.get("/api", (req, res) => {
   res.send(
-    "This is the API track for Kartavya's MERN Portfolio Backend. Explore our various endpoints to interact with the data and services provided."
+    "This is the API track for Kevin's MERN Portfolio Backend. Explore our various endpoints to interact with the data and services provided."
   );
 });
 
@@ -235,7 +235,7 @@ app.use("/api/github-stats", githubStatsRouter);
 // Add a new route for fetching GitHub stats
 app.get("/api/top-langs", async (req, res) => {
   const githubAPIUrl =
-    "https://github-readme-stats.vercel.app/api/top-langs/?username=Kartavya904&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866&hide=Jupyter%20Notebook,Roff";
+    "https://github-readme-stats.vercel.app/api/top-langs/?username=Kevin Ho904&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866&hide=Jupyter%20Notebook,Roff";
 
   try {
     const fetch = (await import("node-fetch")).default; // Dynamic import

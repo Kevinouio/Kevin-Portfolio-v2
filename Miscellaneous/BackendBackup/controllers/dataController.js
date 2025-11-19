@@ -134,8 +134,8 @@ const getCollectionCounts = async (req, res) => {
       yearInReviewTable: await db
         .collection("yearInReviewTable")
         .countDocuments({ deleted: { $ne: true } }),
-      KartavyaPortfolio: await db
-        .collection("KartavyaPortfolio")
+      KevinHoPortfolio: await db
+        .collection("KevinHoPortfolio")
         .countDocuments(),
       FeedTable: await db
         .collection("FeedTable")
@@ -153,7 +153,7 @@ const getCollectionCounts = async (req, res) => {
 const compareAdminName = async (req, res) => {
   const { userName } = req.body;
   const db = getDB();
-  const admin = await db.collection("KartavyaPortfolio").findOne({});
+  const admin = await db.collection("KevinHoPortfolio").findOne({});
   if (!admin) return res.status(404).json({ message: "No Admin found." });
   const match = await bcrypt.compare(userName, admin.userName);
   return match
@@ -166,14 +166,14 @@ const compareAdminPassword = async (req, res) => {
   const { password } = req.body;
   const db = getDB();
   try {
-    const admin = await db.collection("KartavyaPortfolio").findOne({});
+    const admin = await db.collection("KevinHoPortfolio").findOne({});
     if (!admin) return res.status(404).json({ message: "Admin not found" });
     const match = await bcrypt.compare(password, admin.password);
     if (!match) return res.status(401).json({ message: "Incorrect Password" });
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     const expireTime = new Date(Date.now() + 5 * 60000);
-    await db.collection("KartavyaPortfolioOTP").deleteMany({});
-    await db.collection("KartavyaPortfolioOTP").insertOne({ otp, expireTime });
+    await db.collection("KevinHoPortfolioOTP").deleteMany({});
+    await db.collection("KevinHoPortfolioOTP").insertOne({ otp, expireTime });
     res.json({ success: true, otpSent: true, otp: otp, message: "OTP sent." });
   } catch (error) {
     res.status(500).json({ message: "Error comparing passwords." });
@@ -184,7 +184,7 @@ const compareOTP = async (req, res) => {
   const { otp, rememberMe = false } = req.body;
   const db = getDB();
   try {
-    const otpData = await db.collection("KartavyaPortfolioOTP").findOne({});
+    const otpData = await db.collection("KevinHoPortfolioOTP").findOne({});
     if (!otpData || otpData.otp !== otp) {
       return res.status(400).json({ message: "Invalid OTP" });
     }
@@ -210,7 +210,7 @@ const compareOTP = async (req, res) => {
       // 3600000 ms = 1 hour
     });
 
-    await db.collection("KartavyaPortfolioOTP").deleteOne({}); // OTP invalidation
+    await db.collection("KevinHoPortfolioOTP").deleteOne({}); // OTP invalidation
 
     return res.json({ success: true, message: "Logged in successfully!" });
   } catch (err) {
@@ -232,7 +232,7 @@ const setAdminCredentials = async (req, res) => {
   const { userName, password, currentPassword } = req.body;
   const db = getDB();
   try {
-    const admin = await db.collection("KartavyaPortfolio").findOne({});
+    const admin = await db.collection("KevinHoPortfolio").findOne({});
     if (!admin) {
       return res.status(404).json({ message: "Admin not found." });
     }
@@ -244,8 +244,8 @@ const setAdminCredentials = async (req, res) => {
     }
     const hashedUsername = await bcrypt.hash(userName, 10);
     const hashedPassword = await bcrypt.hash(password, 10);
-    await db.collection("KartavyaPortfolio").deleteMany({});
-    await db.collection("KartavyaPortfolio").insertOne({
+    await db.collection("KevinHoPortfolio").deleteMany({});
+    await db.collection("KevinHoPortfolio").insertOne({
       userName: hashedUsername,
       password: hashedPassword,
     });

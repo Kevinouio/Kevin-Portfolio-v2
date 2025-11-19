@@ -13,7 +13,7 @@ import {
 } from "framer-motion";
 import { zoomIn } from "../../services/variants";
 import "../../styles/HomePage.css";
-// import ProfilePhoto from `${process.env.PUBLIC_URL}/Kartavya.webp`;
+// import ProfilePhoto from `${process.env.PUBLIC_URL}/Kevin.webp`;
 
 function HomePage({ isBatterySavingOn, scrolled, addTab, sendQuery }) {
   const [clicked, setClicked] = useState(false);
@@ -42,8 +42,8 @@ function HomePage({ isBatterySavingOn, scrolled, addTab, sendQuery }) {
   };
 
   const keywords = [
-    "Developing with Curiosity and Expertise | Always Learning & Innovating",
-    "Innovating AI-Powered Solutions | Experienced Full Stack Developer",
+    "AI alignment + ML research | MSU Computer Science & Mathematics",
+    "ICPC medalist building human-centered tools, from RL agents to medical AI",
   ];
 
   const handleMouseMove = (event) => {
@@ -235,7 +235,7 @@ function HomePage({ isBatterySavingOn, scrolled, addTab, sendQuery }) {
                 whileInView={"show"}
               >
                 <animated.img
-                  src={`${process.env.PUBLIC_URL}/Jolli.jpg`}
+                  src={`${process.env.PUBLIC_URL}/Kevin.webp`}
                   alt="Profile"
                   className={`profile-picture img-circle${frames[frameIndex]}`}
                   draggable="false"

@@ -15,7 +15,7 @@ let db;
 const connectDB = async () => {
   try {
     await client.connect();
-    db = client.db("KartavyaPortfolioDB"); // Replace with your database name
+    db = client.db("KevinHoPortfolioDB"); // Replace with your database name
     console.log("Connected to MongoDB");
   } catch (error) {
     console.error("MongoDB connection error:", error);

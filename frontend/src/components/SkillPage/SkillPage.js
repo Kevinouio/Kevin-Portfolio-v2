@@ -283,17 +283,18 @@ function SkillPage({ isBatterySavingOn, isWindowModalVisible }) {
 
   useEffect(() => {
     const fetchTopLangData = async () => {
-      const totalHours = 1300;
+      const totalHours = 1500;
       const url = `${process.env.REACT_APP_API_URI}/github-stats/top-langs`;
 
       // Fallback data if fetch fails or returns nothing
       const fallbackLangJson = {
-        JavaScript: "33.06%",
-        Python: "32.19%",
-        HTML: "14.98%",
-        "C++": "8.53%",
-        CSS: "7.12%",
-        "ASP.NET": "4.12%",
+        Python: "24.00%",
+        "C/C++": "22.00%",
+        Java: "15.00%",
+        JavaScript: "12.00%",
+        MATLAB: "10.00%",
+        Julia: "9.00%",
+        R: "8.00%",
       };
 
       try {
@@ -445,7 +446,7 @@ function SkillPage({ isBatterySavingOn, isWindowModalVisible }) {
             <motion.div className="last-skill-row">
               <motion.div className="last-skill-column column1">
                 <a
-                  href="https://github.com/Kartavya904/#topLang"
+                  href="https://github.com/Kevinouio"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="github-icon"

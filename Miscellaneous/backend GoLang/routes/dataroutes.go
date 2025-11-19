@@ -103,7 +103,7 @@ func RegisterDataRoutes(router *gin.RouterGroup) {
 		collections := []string{
 			"skillsCollection", "skillsTable", "projectTable", "experienceTable",
 			"involvementTable", "honorsExperienceTable", "yearInReviewTable",
-			"KartavyaPortfolio", "FeedTable",
+			"KevinHoPortfolio", "FeedTable",
 		}
 		result := make(map[string]int64)
 		for _, name := range collections {

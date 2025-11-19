@@ -290,7 +290,7 @@
         "Between August 2024 and January 2025, I embarked on an ambitious project to completely overhaul my personal portfolio website using the MERN stack. Balancing job applications, classes, and exams, I transformed a simple update into a deep dive into professional full-stack development.",
         "Leveraging MongoDB, Express, React, and Node.js, I architected the platform with clear separation between backend API routes, controllers, and configuration, and the frontend’s UI components and services. This structure ensured real-time data retrieval and a dynamic, responsive experience for every visitor.",
         "A key highlight was the integration of advanced features such as customized responsive backgrounds, engaging frontend animations, and a secure Admin Portal with OAuth and two-factor authentication. I even implemented a Windows File Explorer-style UI to manage portfolio details with precision and ease.",
-        "Throughout this journey, I learned invaluable lessons in time management, perseverance, and modular design—refining my technical skills and strategic approach to complex challenges. This project stands as a testament to my growth as a developer and my commitment to continuous innovation, and I am excited to share my enhanced portfolio at kartavya-singh.com."
+        "Throughout this journey, I learned invaluable lessons in time management, perseverance, and modular design—refining my technical skills and strategic approach to complex challenges. This project stands as a testament to my growth as a developer and my commitment to continuous innovation, and I am excited to share my enhanced portfolio at kevin-ho.com."
       ],
       "featured": "true"
     }

@@ -11,6 +11,8 @@ import "../../styles/AdminConsole.css";
 
 const API_URL = process.env.REACT_APP_API_URI;
 
+const ADMIN_COLLECTION_KEY = "KevinHoPortfolio";
+
 const tables = [
   { title: "Skills", key: "skillsCollection" },
   { title: "Skill Graph", key: "skillsTable" },
@@ -19,7 +21,7 @@ const tables = [
   { title: "Involvements", key: "involvementTable" },
   { title: "Honors", key: "honorsExperienceTable" },
   { title: "Year In Reviews", key: "yearInReviewTable" },
-  { title: "Admin Management", key: "KartavyaPortfolio" },
+  { title: "Admin Management", key: ADMIN_COLLECTION_KEY },
   { title: "Feeds", key: "FeedTable" },
 ];
 
@@ -62,7 +64,7 @@ const AdminConsole = ({ logout }) => {
     setNewItemOpen(false);
     setActiveFormData(null);
     setAdminError("");
-    if (selectedTable.key === "KartavyaPortfolio") {
+    if (selectedTable.key === ADMIN_COLLECTION_KEY) {
       // User Management (admin credentials) – no items to fetch
       setItems([]);
     } else {
@@ -478,7 +480,7 @@ const AdminConsole = ({ logout }) => {
             className="db-btn"
             onClick={() =>
               window.open(
-                "https://cloud.mongodb.com/v2/672950dc517fd96235a1c212#/metrics/replicaSet/672951f5bf98b168a06dfdb4/explorer/KartavyaPortfolioDB",
+                "https://cloud.mongodb.com/v2/672950dc517fd96235a1c212#/metrics/replicaSet/672951f5bf98b168a06dfdb4/explorer/KevinHoPortfolioDB",
                 "_blank"
               )
             }
@@ -512,18 +514,18 @@ const AdminConsole = ({ logout }) => {
       ) : (
         <div className="expanded-view">
           <h2>{selectedTable.title}</h2>
-          {selectedTable.key !== "KartavyaPortfolio" && (
+          {selectedTable.key !== ADMIN_COLLECTION_KEY && (
             <span className="count">
               Total Items: {collectionCounts[selectedTable.key] || 0}
             </span>
           )}
-          {selectedTable.key !== "KartavyaPortfolio" && (
+          {selectedTable.key !== ADMIN_COLLECTION_KEY && (
             <button className="add-item-btn" onClick={handleAddNew}>
               <FaPlus /> Add New
             </button>
           )}
 
-          {selectedTable.key === "KartavyaPortfolio" && (
+          {selectedTable.key === ADMIN_COLLECTION_KEY && (
             <div className="admin-credentials-form">
               <h3>Update Admin Credentials</h3>
               <input
@@ -557,7 +559,7 @@ const AdminConsole = ({ logout }) => {
             </div>
           )}
 
-          {selectedTable.key !== "KartavyaPortfolio" && (
+          {selectedTable.key !== ADMIN_COLLECTION_KEY && (
             <div className="item-list">
               {newItemOpen && activeFormData && (
                 <div className="item-card new-item-card" ref={formRef}>

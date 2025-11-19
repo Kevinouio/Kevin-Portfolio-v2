@@ -18,7 +18,7 @@ fastify.register(cors, {
   origin: (origin, callback) => {
     const allowedOrigins = [
       "https://kartavya-portfolio-mern-frontend.onrender.com",
-      "https://kartavya-singh.com",
+      "https://kevin-ho.com",
       "http://localhost:3000",
       "http://localhost:3001",
     ];
@@ -56,12 +56,12 @@ fastify.get(
 
 // Root endpoints.
 fastify.get("/", async (request, reply) => {
-  reply.send("Welcome to Kartavya's MERN Portfolio Backend");
+  reply.send("Welcome to Kevin's MERN Portfolio Backend");
 });
 
 fastify.get("/api", async (request, reply) => {
   reply.send(
-    "This is the API track for Kartavya's MERN Portfolio Backend. Explore our various endpoints to interact with the data and services provided."
+    "This is the API track for Kevin's MERN Portfolio Backend. Explore our various endpoints to interact with the data and services provided."
   );
 });
 

@@ -10,8 +10,8 @@ if (!uri) {
 }
 
 // DB names from env (fallbacks if you leave them undefined)
-const primaryDbName = process.env.MONGO_DB_NAME || "KartavyaPortfolioDB";
-const aiDbName = process.env.MONGO_DB_NAME_AI || "KartavyaPortfolioDBAI";
+const primaryDbName = process.env.MONGO_DB_NAME || "KevinHoPortfolioDB";
+const aiDbName = process.env.MONGO_DB_NAME_AI || "KevinHoPortfolioDBAI";
 
 const client = new MongoClient(uri, {
   // these driver options are no‑ops in v4+ but harmless

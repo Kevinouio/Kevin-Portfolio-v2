@@ -4,7 +4,7 @@ from pymongo.server_api import ServerApi
 # MongoDB setup
 uri = "Hmmm!"
 client = MongoClient(uri, server_api=ServerApi('1'))
-db = client["KartavyaPortfolioDB"]
+db = client["KevinHoPortfolioDB"]
 
 # Function to add a single skill entry
 def add_skill(skill_data):

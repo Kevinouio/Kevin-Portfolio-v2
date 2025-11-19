@@ -1,10 +1,10 @@
-Kartavya's Deep explanation of the application
+Kevin's Deep explanation of the application
 
-This document provides a comprehensive, sanitized deep-dive into the Kartavya-Portfolio-MERN repository: purpose, architecture, data flows, and operational notes. Sensitive values (API keys, connection strings, tokens) are intentionally omitted. Never commit secrets to source control.
+This document provides a comprehensive, sanitized deep-dive into the Kevin Ho-Portfolio-MERN repository: purpose, architecture, data flows, and operational notes. Sensitive values (API keys, connection strings, tokens) are intentionally omitted. Never commit secrets to source control.
 
 High-level summary
 
-- Purpose: A personal MERN portfolio website for Kartavya Singh that presents projects, experience, skills, media, and contact facilities in a modern, animated UI.
+- Purpose: A personal MERN portfolio website for Kevin Ho that presents projects, experience, skills, media, and contact facilities in a modern, animated UI.
 - Main capabilities:
   - Serves a responsive React frontend with polished interactions and multimedia.
   - Provides a backend API to manage portfolio data, serve images, and handle contact submissions.

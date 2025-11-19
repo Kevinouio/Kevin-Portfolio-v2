@@ -7,8 +7,8 @@ async function pingRoutes(fastify, options) {
       if (!db) {
         throw new Error("Database connection not available");
       }
-      // Execute a simple query. Here we use the "KartavyaPortfolio" collection as an example.
-      const admin = await db.collection("KartavyaPortfolio").findOne();
+      // Execute a simple query. Here we use the "KevinHoPortfolio" collection as an example.
+      const admin = await db.collection("KevinHoPortfolio").findOne();
       // If the query passes, both backend and database are working.
       reply.send({
         message: "Backend is active",

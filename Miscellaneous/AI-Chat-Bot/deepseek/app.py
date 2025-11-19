@@ -78,7 +78,7 @@ async def preload_models():
 @app.get("/")
 @app.get("/api")
 async def api_info():
-    return {"message": "This is Kartavya's DeepSeek Server using a lightweight model."}
+    return {"message": "This is Kevin's DeepSeek Server using a lightweight model."}
 
 @app.get("/health")
 async def health_check():

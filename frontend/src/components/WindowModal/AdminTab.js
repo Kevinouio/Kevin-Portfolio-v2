@@ -58,14 +58,14 @@ const AdminTab = ({ loggedIn, setLoggedIn }) => {
   };
 
   const sendOtpEmail = (generatedOTP) => {
-    const otpMessage = `Hey Kartavya,\n\nHere is your OTP: ${generatedOTP}. It expires in 5 minutes.\n\nStay secure,\nKartavya's OTP Service`;
+    const otpMessage = `Hey Kevin,\n\nHere is your OTP: ${generatedOTP}. It expires in 5 minutes.\n\nStay secure,\nKevin's OTP Service`;
     emailjs.send(
       process.env.REACT_APP_EMAILJS_SERVICE_ID,
       process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
       {
-        from_name: "Kartavya's OTP Service",
-        from_email: "singhk6@mail.uc.edu",
-        from_phone: "5138377683",
+        from_name: "Kevin's OTP Service",
+        from_email: "Kevintho2005@gmail.com",
+        from_phone: "6019101007",
         message: otpMessage,
       },
       process.env.REACT_APP_EMAILJS_USER_ID

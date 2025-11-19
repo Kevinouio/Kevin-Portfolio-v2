@@ -1,11 +1,11 @@
-PS D:\Desktop\All Projects\Kartavya-Portfolio-MERN\frontend> git ls-files  
+PS D:\Desktop\All Projects\Kevin Ho-Portfolio-MERN\frontend> git ls-files  
 .gitignore
 README.md
 obfuscator.config.json
 package-lock.json
 package.json
-public/Kartavya-Profile-Photo.webp
-public/Kartavya.webp
+public/Kevin Ho-Profile-Photo.webp
+public/Kevin Ho.webp
 public/contact-bg.webp
 public/favicon.gif
 public/favicon.ico
@@ -17,9 +17,9 @@ public/user-icon.png
 public/user-icon.svg
 src/App.css
 src/App.js
-src/assets/Singh_Kartavya_Resume2024.pdf
-src/assets/Singh_Kartavya_Resume2025.pdf
-src/assets/Singh_Kartavya_Resume2026.pdf
+src/assets/Singh_Kevin Ho_Resume2024.pdf
+src/assets/Singh_Kevin Ho_Resume2025.pdf
+src/assets/Singh_Kevin Ho_Resume2026.pdf
 src/assets/font/Montserrat-Bold.ttf
 src/assets/font/Montserrat-Medium.ttf
 src/assets/font/Montserrat-Regular.ttf
@@ -165,4 +165,4 @@ src/styles/SkillPage.css
 src/styles/SkillSection.css
 src/styles/SkilllGraph.css
 src/styles/WindowModal.css
-PS D:\Desktop\All Projects\Kartavya-Portfolio-MERN\frontend> 
+PS D:\Desktop\All Projects\Kevin Ho-Portfolio-MERN\frontend> 

@@ -83,7 +83,7 @@ const FeedTab = () => {
 
   return (
     <>
-      <h1 className="feed-tab-title">Kartavya's Feed</h1>
+      <h1 className="feed-tab-title">Kevin's Feed</h1>
 
       <div className="feed-tab" ref={containerRef}>
         {/* <h1 className="feed-warning">Under Construction!</h1> */}

@@ -214,7 +214,7 @@ const NavBar = ({ isBatterySavingOn, addTab }) => {
             // }
           }}
         >
-          <b>Kartavya Singh</b>
+          <b>Kevin Ho</b>
         </motion.a>
 
         {/* Toggle button for menu */}
@@ -375,7 +375,7 @@ const NavBar = ({ isBatterySavingOn, addTab }) => {
                 className={"navbar-link"}
                 onClick={(e) => {
                   e.preventDefault();
-                  addTab("FeedTab", { title: "Kartavya's Feed" });
+                  addTab("FeedTab", { title: "Kevin's Feed" });
                   setMenuOpen(false);
                 }}
               >
@@ -388,7 +388,7 @@ const NavBar = ({ isBatterySavingOn, addTab }) => {
               whileTap={screenWidth > 992 ? { scale: 0.9, rotate: 2 } : {}}
             >
               <a
-                download="Kartavya-Singh-Resume-2026.pdf"
+                download="KevinHoResume2026.pdf"
                 href={Resume}
                 className="navbar-link"
                 target="_blank"
@@ -409,7 +409,7 @@ const NavBar = ({ isBatterySavingOn, addTab }) => {
                 className={"navbar-link ai-chat-nav"}
                 onClick={(e) => {
                   e.preventDefault();
-                  addTab("AIChatTab", { title: "Kartavya's AI Companion" });
+                  addTab("AIChatTab", { title: "Kevin's AI Companion" });
                   setMenuOpen(false);
                 }}
               >

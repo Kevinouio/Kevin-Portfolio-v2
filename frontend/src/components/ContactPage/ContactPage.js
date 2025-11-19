@@ -160,8 +160,8 @@ function ContactPage({ isBatterySavingOn, addTab }) {
                 }
               >
                 Phone:{" "}
-                <a href="tel:5138377683" className="lead">
-                  513-837-7683
+                <a href="tel:16019101007" className="lead">
+                  601-910-1007
                 </a>
               </motion.h5>
               <br />
