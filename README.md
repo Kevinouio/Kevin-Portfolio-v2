@@ -1,10 +1,6 @@
 # Kevin’s Portfolio Website + AI Companion
 
 <p align="center">
-  <img src="./frontend/public/Kevin.webp" alt="Kevin Ho Portfolio Preview" width="420"/>
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/badge/Node.js-Fastify-brightgreen?logo=node.js&logoColor=white" alt="Node.js/Fastify" />
   <img src="https://img.shields.io/badge/React-Hooks%20%26%20Framer%20Motion-61DAFB?logo=react&logoColor=white" alt="React" />
   <img src="https://img.shields.io/badge/MongoDB-Atlas-success?logo=mongodb&logoColor=white" alt="MongoDB Atlas" />
