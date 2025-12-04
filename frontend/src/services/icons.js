@@ -34,8 +34,34 @@ import hindi from "../assets/img/icons/hindi.svg";
 import japanese from "../assets/img/icons/japanese.svg";
 import french from "../assets/img/icons/french.svg";
 import arabic from "../assets/img/icons/arabic.png";
+import r from "../assets/img/icons/R_logo.svg";
+import swift from "../assets/img/icons/swift.svg";
+import objc from "../assets/img/icons/objc.svg";
+import numpy from "../assets/img/icons/numpy.svg";
+import tailwind from "../assets/img/icons/tailwind.svg";
+import torch from "../assets/img/icons/torch.svg";
+import pandas from "../assets/img/icons/pandas.svg";
+import gym from "../assets/img/icons/gym.svg";
+import docker from "../assets/img/icons/docker.svg";
+import cloudflare from "../assets/img/icons/cloudflare.svg";
+import huggingface from "../assets/img/icons/huggingface.svg";
+import jax from "../assets/img/icons/jax.svg";
+
+
 
 const icons = {
+  r,
+  jax,
+  huggingface,
+  cloudflare,
+  torch,
+  pandas,
+  docker,
+  gym,
+  numpy,
+  tailwind,
+  objc,
+  swift,
   javascript,
   python,
   cpp,
