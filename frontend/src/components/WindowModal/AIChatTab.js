@@ -440,7 +440,7 @@ const AIChatBot = ({
             }}
           >
             <animated.img
-              src={`${process.env.PUBLIC_URL}/system-user.webp`}
+              src={`${process.env.PUBLIC_URL}/Kevin1.jpg`}
               alt="Profile"
               className={` img-responsive img-circle${frames[frameIndex]}`}
               draggable="false"

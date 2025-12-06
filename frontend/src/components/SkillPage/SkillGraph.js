@@ -47,15 +47,22 @@ const responsive = {
 
 const SkillGraph = ({ givenData, isBatterySavingOn }) => {
   const numericScores = givenData.Scores.map((score) => Number(score) || 0);
+  const maxScore = numericScores.length ? Math.max(...numericScores) : 0;
+  const normalizedScores = numericScores.map((score) => {
+    const scaled = maxScore <= 5 ? score * 20 : score; // assume legacy 5-point scale, otherwise keep as-is
+    const clamped = Math.min(100, Math.max(0, scaled));
+    return Number.isFinite(clamped) ? clamped : 0;
+  });
   const averageScore =
-    numericScores.reduce((sum, score) => sum + score, 0) / numericScores.length;
+    normalizedScores.reduce((sum, score) => sum + score, 0) /
+    (normalizedScores.length || 1);
 
   const data = {
     labels: givenData.Labels,
     datasets: [
       {
         label: givenData.skillTitle,
-        data: numericScores,
+        data: normalizedScores,
         backgroundColor: "rgba(252, 188, 29, 0.2)",
         borderColor: "#6cbcfc",
         borderWidth: 2,
@@ -75,9 +82,15 @@ const SkillGraph = ({ givenData, isBatterySavingOn }) => {
     maintainAspectRatio: false,
     scales: {
       r: {
-        min: 4,
-        max: 5,
-        ticks: { stepSize: 0.1, color: "#6cbcfc", display: false },
+        min: 0,
+        max: 100,
+        ticks: {
+          stepSize: 10,
+          color: "#6cbcfc",
+          display: false,
+          showLabelBackdrop: false,
+          backdropColor: "transparent",
+        },
         angleLines: {
           color: "#edeeef",
           lineWidth: 0.5,
@@ -102,7 +115,7 @@ const SkillGraph = ({ givenData, isBatterySavingOn }) => {
       },
       tooltip: {
         callbacks: {
-          label: (context) => `Score: ${context.raw}`,
+          label: (context) => `Score: ${context.raw.toFixed(1)} / 100`,
         },
         backgroundColor: "#212529",
         titleColor: "#6cbcfc",
@@ -127,7 +140,7 @@ const SkillGraph = ({ givenData, isBatterySavingOn }) => {
           ctx.font = `10px 'Montserrat', sans-serif`;
           ctx.fillStyle = "#edeeef";
           ctx.textAlign = "center";
-          ctx.fillText(`Avg. ${averageScore.toFixed(2)}`, x, y);
+          ctx.fillText(`Avg. ${averageScore.toFixed(1)} / 100`, x, y);
           ctx.restore();
         },
       },

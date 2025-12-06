@@ -119,12 +119,7 @@ function AboutPage({ isBatterySavingOn, isWindowModalVisible, addTab }) {
                   MSU '27 · B.S. Computer Science & Mathematics · 4.0 GPA
                 </p>
                 <p className="about-description">
-                  I'm Kevin Ho, a double-major at Mississippi State University
-                  researching network dynamics, medical imaging, and AI
-                  alignment. From leading the Chess Club and ACM Competitive
-                  Programming team to winning Best Use of Streamlit at AI ATL,
-                  I love transforming deep technical research into accessible,
-                  human-centered software.
+                  My name is Kevin Ho and I study Computer Science and Mathematics at Mississippi State University. I spend a lot of time working on research in network dynamics, medical imaging, and AI alignment. I enjoy taking difficult technical ideas and turning them into tools that feel simple and intuitive. I also lead the Chess Club and the ACM Competitive Programming team, which gives me a chance to work with great people who love thinking and improving together.
                 </p>
               </motion.div>
               <motion.h2
