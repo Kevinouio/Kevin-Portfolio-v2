@@ -18,7 +18,7 @@ fastify.register(cors, {
   origin: (origin, callback) => {
     const allowedOrigins = [
       "https://kartavya-portfolio-mern-frontend.onrender.com",
-      "https://kevin-ho.com",
+      "https://kevinouio.com",
       "http://localhost:3000",
       "http://localhost:3001",
     ];

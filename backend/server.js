@@ -15,6 +15,7 @@ app.register(require("@fastify/cors"), {
   origin: [
     "https://kartavya-portfolio-mern-frontend.onrender.com",
     "https://kevinouio.com",
+    "http://keivnouio.com",
     "http://localhost:3000",
     "http://localhost:3001",
   ],
