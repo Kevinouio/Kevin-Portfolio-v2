@@ -32,7 +32,7 @@ const Footer = ({ isBatterySavingOn, addTab }) => {
     },
     {
       href: Resume,
-      icon: require("../../assets/img/icons/window.svg"),
+      icon: require("../../assets/img/icons/github.png"),
       label: "Resume",
     },
   ];
